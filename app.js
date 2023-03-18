@@ -5,13 +5,18 @@ var buttons = document.querySelectorAll('button');
 console.log(buttons);
 
 function displayNum(element){
+    console.log(element.target.innerHTML);
     if(element.target.innerHTML == 'AC'){
-        display.value = "";
-        location.reload();
+        string = "";
+        display.value = string;
+        // location.reload();
     } else if(element.target.innerHTML == '='){
         string = eval(string);
         display.value = string;
-    }
+    } /*else if((element.target.innerHTML == '+' || element.target.innerHTML == '*'|| element.target.innerHTML == '/' || element.target.innerHTML == '-') && (element.target.innerHTML == '+' || element.target.innerHTML == '*'|| element.target.innerHTML == '/' || element.target.innerHTML == '-')){
+        
+
+    }*/
     else{
         console.log(element.target)
         string = string + element.target.innerHTML;
