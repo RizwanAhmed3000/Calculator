@@ -13,10 +13,10 @@ function displayNum(element){
     } else if(element.target.innerHTML == '='){
         string = eval(string);
         display.value = string;
-    } /*else if((element.target.innerHTML == '+' || element.target.innerHTML == '*'|| element.target.innerHTML == '/' || element.target.innerHTML == '-') && (element.target.innerHTML == '+' || element.target.innerHTML == '*'|| element.target.innerHTML == '/' || element.target.innerHTML == '-')){
-        
-
-    }*/
+    } else if(element.target.innerHTML == 'DE'){
+        string = string.toString().slice(0, -1);
+        display.value = string;
+    }
     else{
         console.log(element.target)
         string = string + element.target.innerHTML;
